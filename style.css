@@ -1,0 +1,49 @@
+body {
+    background-color: bisque;
+}
+#header{
+    background-color: burlywood;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+}
+#header h1{
+    color: blue;
+}
+#header blockquote{
+    background-color: yellow;
+    border: 2px dotted;
+}
+.menu ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 15px;
+}
+.menu a{
+    text-decoration: none;
+    color: crimson;
+}
+.menu a:hover{
+    font-weight: bolder;
+    color:rgb(177, 3, 38);
+}
+.gambar {
+    text-align: center;
+}
+.gambar img{
+    width: 20%;
+}
+.koleksi {
+    text-align: center;
+}
+.koleksi img{
+    width: 20%;
+}
+.fp::first-letter{
+    color: blue;
+    font-size: 40px;
+}
+.olshop a:hover{
+    font-weight: bolder;
+    color: rgb(0, 0, 136);
+}
