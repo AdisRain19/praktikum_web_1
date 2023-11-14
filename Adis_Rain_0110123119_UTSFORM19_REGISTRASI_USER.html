@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Registrasi User</title>
+    <style>
+    body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            background-color: whitesmoke;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <h2>Form Registrasi User</h2>
+    <form action="proses_data.php" method="POST">
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" >
+        <br>
+        <br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" >
+        <br>
+        <br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" >
+        <br>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" >
+        <br>
+        <br>
+        <label for="cekpw">Cek Password:</label>
+        <input type="text" id="cekpw" name="cekpw">
+        <br>
+        <br>
+        <label for="kategori">Kategori:</label>
+        <select id="kategori" name="kategori">
+            <option value="pegawai">Pegawai</option>
+            <option value="karyawan">Karyawan</option>
+            <option value="mahasiswa">Mahasiswa</option>
+        </select>
+        <br>
+        <br>
+        <div class="daftar">
+        <input type="submit" value="Daftar">
+        </div>
+    </form>
+</body>
+</html>
