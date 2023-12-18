@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biaya Parkir</title>
+  <style>
+    body {
+        background-color: cadetblue;
+        font-family: Arial, sans-serif;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+</style>
+</head>
+<body>
+
+  <h2>Hitung Biaya Parkir</h2>
+
+  <label for="jamMasuk">Jam Masuk: </label>
+  <input type="text" id="jamMasuk" placeholder="HH:mm">
+  <br>
+  <br>
+  <label for="jamKeluar">Jam Keluar: </label>
+  <input type="text" id="jamKeluar" placeholder="HH:mm">
+   <br>
+   <br>
+  <label for="tarifPerJam">Tarif Parkir per Jam: </label>
+  <input type="number" id="tarifPerJam" placeholder="Tarif per Jam">
+   <br>
+   <br>
+  <button onclick="hitungBiaya()">Hitung Biaya</button>
+
+  <p id="hasilBiaya"></p>
+
+  <script>
+    function hitungBiaya() {
+      var jamMasuk = document.getElementById("jamMasuk").value;
+      var jamKeluar = document.getElementById("jamKeluar").value;
+      var tarifPerJam = document.getElementById("tarifPerJam").value;
+
+      // Validasi input
+      if (!jamMasuk || !jamKeluar || !tarifPerJam) {
+        alert("Harap lengkapi semua field!");
+        return;
+      }
+
+      // Parsing jam masuk dan jam keluar menjadi objek Date
+      var waktuMasuk = new Date("2023-01-01 " + jamMasuk);
+      var waktuKeluar = new Date("2023-01-01 " + jamKeluar);
+
+      // Menghitung selisih waktu dalam jam
+      var selisihJam = (waktuKeluar - waktuMasuk) / (1000 * 60 * 60);
+
+      // Menghitung biaya parkir
+      var biayaParkir = selisihJam * tarifPerJam;
+
+      // Menampilkan hasil
+      document.getElementById("hasilBiaya").innerText = "Biaya Parkir: Rp " + biayaParkir.toFixed(2);
+    }
+  </script>
+
+</body>
+</html>
